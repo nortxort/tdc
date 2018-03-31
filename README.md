@@ -21,8 +21,8 @@ A basic example:
 	
 	# show the results
 	for room in directory.rooms:
-		print('%s, Users: %s, Broadcasters: %s, Watching: %s' % 
-			(room.name, room.total_users, room.broadcasting_count, room.watching_count))
+	    print('%s, Users: %s, Broadcasters: %s, Watching: %s' % 
+	        (room.name, room.total_users, room.broadcasting_count, room.watching_count))
 	
 
 ## Author
