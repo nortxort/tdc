@@ -2,7 +2,11 @@
 
 Directory crawler.
 
+Two versions. Original python version and a version ported to php.
+
 ### Requirements
+
+**python:**
 
 * [requests](https://github.com/requests/requests)
 * [requests_toolbelt](https://github.com/requests/toolbelt) *
@@ -12,8 +16,19 @@ Directory crawler.
 
 \* *Only required because of it's import in web.py. Not relevant to the code.*
 
+**php:**
+
+
+Tested on windows using [xampp](https://www.apachefriends.org/index.html)
+
+The full path to cacert.pem must be set in [web.php line 22](https://github.com/nortxort/tdc/blob/master/php/web.py)
+
+An updated version of cacert.pem can be downloaded [here](https://curl.haxx.se/docs/caextract.html)
+
+
 ## Usage
-A basic example:
+
+**Python:**
 
 	import tdc
 	
@@ -24,6 +39,10 @@ A basic example:
 	    print('%s, Users: %s, Broadcasters: %s, Watching: %s' % 
 	        (room.name, room.total_users, room.broadcasting_count, room.watching_count))
 	
+
+**php:**
+
+Open the url to the php folder in your browser e.g `http://localhost/path/to/php/folder/`
 
 ## Author
 

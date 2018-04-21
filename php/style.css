@@ -1,0 +1,34 @@
+#status {
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 608px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+#room-container {
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 608px;
+    padding: 5px;
+    text-align: center;
+}
+
+
+#room-header {
+    height: 30px;
+}
+
+
+img.room_image {
+    height: 150px;
+    width: 200px;
+}
+
+
+#clear-fix {
+    height: 10px;
+}
