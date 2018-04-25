@@ -19,11 +19,9 @@ Two versions. Original python version and a version ported to php.
 **php:**
 
 
-Tested on windows using [xampp](https://www.apachefriends.org/index.html)
+Tested on windows using [xampp](https://www.apachefriends.org/index.html).
 
-The full path to cacert.pem must be set in [web.php line 22](https://github.com/nortxort/tdc/blob/master/php/web.php#L22)
-
-An updated version of cacert.pem can be downloaded [here](https://curl.haxx.se/docs/caextract.html)
+cacert.pem can be downloaded [here](https://curl.haxx.se/docs/caextract.html).
 
 
 ## Usage

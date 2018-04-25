@@ -19,9 +19,9 @@ function curl_defaults()
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_TIMEOUT => 20,
         CURLOPT_AUTOREFERER => true,
-        CURLOPT_CAINFO => ''  // Set path to cacert.pem
+        CURLOPT_CAINFO => realpath('./cacert.pem')
     );
-    
+
     return $options;
 }
 

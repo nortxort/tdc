@@ -31,7 +31,8 @@ $dc = new DirectoryCrawler(true);
                 </div>
             <?php foreach ($room->room_images() as $image)
             {
-                echo "<img class=\"room_image\" src=\"$image->url\">\n";
+                echo "\n<img class=\"room_image\" src=\"$image->url\" "
+                        . "title=\"$image->uid\">";
             } ?>
         </div>
         
