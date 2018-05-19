@@ -21,8 +21,6 @@ Two versions. Original python version and a version ported to php.
 
 Tested on windows using [xampp](https://www.apachefriends.org/index.html).
 
-cacert.pem can be downloaded [here](https://curl.haxx.se/docs/caextract.html).
-
 
 ## Usage
 
