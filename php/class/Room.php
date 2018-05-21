@@ -45,14 +45,19 @@ class Room
         }
     }
     
+    public function update_stats($users)
+    {
+        $this->broadcasting_count = $users['broadcasting_count'];
+        $this->watching_count = $users['watching_count'];
+        $this->total_users = $this->watching_count + $this->broadcasting_count; 
+    }
+
     public function add_images($images)
     {
-        if (count($images) == 1)
-        {
+        if (count($images) == 1) {
             $this->images[] = $images[0];
         }
-        else if (count($images) > 1)
-        {
+        else if (count($images) > 1) {
             $merged = array_merge($this->images, $images);
             $this->images = $merged;
         }
@@ -61,8 +66,8 @@ class Room
     public function room_images()
     {
         $images = array();
-        foreach ($this->images as $image_url)
-        {
+        
+        foreach ($this->images as $image_url) {
             $image = new RoomImage($image_url);
             $images[] = $image;
         }

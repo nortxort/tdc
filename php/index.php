@@ -14,6 +14,7 @@ $dc = new DirectoryCrawler(true);
     <body>
         <div id="status">
             <?php echo "Rooms: ".count($dc->rooms).
+                       " Total Users: ".$dc->total_dir_users.
                        " Pages crawled: ".$dc->pages_crawled; ?>
         </div>
         
@@ -24,7 +25,7 @@ $dc = new DirectoryCrawler(true);
         { ?>
         <div id="room-container">
             <div id="room-header"><?php echo 
-            "<a href=\"https://tinychat.com/room/".$room->name."\">
+            "<a href=\"https://tinychat.com/room/".$room->name."\" >
                 ".$room->name."</a>
                     Broadcasting: ".$room->broadcasting_count.
                     " Watching: ". $room->watching_count; ?> 

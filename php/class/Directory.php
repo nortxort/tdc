@@ -10,6 +10,9 @@ class DirectoryCrawler
     
     public $pages_crawled = 0;
     
+    public $total_dir_users = 0;
+
+
     private $base_url = 'https://tinychat.com';
     
     private $post_url = 'https://tinychat.com/home/data';
@@ -73,7 +76,7 @@ class DirectoryCrawler
         $this->csrf_token = $token->getAttribute('content');
     }
     
-    private function room_extractor($rooms)
+    private function data_extractor($rooms)
     {
         foreach ($rooms as $room)
         {
@@ -83,7 +86,10 @@ class DirectoryCrawler
             }
             else {
                 $this->rooms[$room_name]->add_images($room['images']);
+                $this->rooms[$room_name]->update_stats($room['users']);
             }
+            
+            $this->total_dir_users += $this->rooms[$room_name]->total_users;
         }
     }
 
@@ -104,7 +110,7 @@ class DirectoryCrawler
             }
             else {
                 $rooms = $json_data['rooms'];
-                $this->room_extractor($rooms);
+                $this->data_extractor($rooms);
                 $this->page ++;
             } 
         }
@@ -125,7 +131,10 @@ class DirectoryCrawler
             }
             else {
                 $this->rooms[$room_name]->add_images($room['images']);
+                $this->rooms[$room_name]->update_stats($room['users']);
             }
+            
+            $this->total_dir_users += $this->rooms[$room_name]->total_users;
         }
         $this->page_crawler();
     }
