@@ -1,6 +1,6 @@
 <?php
-require_once 'Room.php';
-require_once './web.php';
+require_once('Room.php');
+require_once('./web.php');
 
 class DirectoryCrawler
 {
