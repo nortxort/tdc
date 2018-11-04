@@ -1,5 +1,5 @@
 <?php
-require_once 'class/Directory.php';
+require_once('class/Directory.php');
 
 $dc = new DirectoryCrawler(true);
 ?>
